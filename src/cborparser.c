@@ -24,6 +24,9 @@
 
 #include "cborinternalmacros_p.h"
 
+#define CBOR_NO_ASSERT
+#define static_assert(cond, msg)
+
 #include "cbor.h"
 #include "cborinternal_p.h"
 #include "compilersupport_p.h"

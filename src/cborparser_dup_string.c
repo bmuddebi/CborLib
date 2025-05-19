@@ -24,6 +24,7 @@
 
 #include "cborinternalmacros_p.h"
 
+#define CBOR_NO_ASSERT
 #include "cbor.h"
 #include "compilersupport_p.h"
 #include "memory.h"

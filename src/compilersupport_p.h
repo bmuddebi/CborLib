@@ -25,6 +25,8 @@
 #ifndef COMPILERSUPPORT_H
 #define COMPILERSUPPORT_H
 
+#define CBOR_NO_ASSERT
+
 #include "cbor.h"
 
 #ifndef _BSD_SOURCE
@@ -34,7 +36,11 @@
 #  define _DEFAULT_SOURCE
 #endif
 #ifndef assert
+#ifndef CBOR_NO_ASSERT
 #  include <assert.h>
+#else
+#define assert(x)
+#endif
 #endif
 #include <stddef.h>
 #include <stdint.h>

@@ -26,7 +26,11 @@
 #define CBOR_H
 
 #ifndef assert
+#ifndef CBOR_NO_ASSERT
 #include <assert.h>
+#else
+#define assert(x)
+#endif
 #endif
 #include <limits.h>
 #include <stddef.h>
